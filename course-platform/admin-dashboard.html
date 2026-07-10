@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard — Coursework</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar" id="sidebar">
+    <a href="admin-dashboard.html" class="brand"><span class="mark">C</span> Coursework</a>
+    <div class="user-card"><div class="name">Admin — R. Nair</div><div class="role">Administrator</div></div>
+    <div class="side-section-label">Menu</div>
+    <nav class="side-nav">
+      <a href="admin-dashboard.html" class="active"><span class="icon">▤</span> Dashboard</a>
+      <a href="courses.html"><span class="icon">▥</span> Manage Courses</a>
+      <a href="#"><span class="icon">☺</span> Students</a>
+      <a href="#"><span class="icon">◔</span> Enrollments</a>
+      <a href="#"><span class="icon">▦</span> Reports</a>
+    </nav>
+    <div class="side-section-label">Account</div>
+    <nav class="side-nav">
+      <a href="#"><span class="icon">⚙</span> Settings</a>
+      <a href="index.html"><span class="icon">⏻</span> Log out</a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="hamburger" aria-label="Toggle menu">☰</button>
+      <div class="search"><span>⌕</span><input type="text" placeholder="Search students, courses..."></div>
+      <div class="right">
+        <a href="notifications.html" class="bell"><span>🔔</span><span class="dot"></span></a>
+        <div class="avatar">RN</div>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="panel-head">
+        <div>
+          <span class="eyebrow">Module 6 — Admin Dashboard</span>
+          <h1>Platform overview</h1>
+        </div>
+        <a href="add-course.html" class="btn btn-gold">+ Add course</a>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card"><div class="tab"></div><div class="lbl">Total students</div><div class="val">1,240</div><div class="delta">+38 this month</div></div>
+        <div class="stat-card"><div class="tab"></div><div class="lbl">Total courses</div><div class="val">86</div><div class="delta">+3 this month</div></div>
+        <div class="stat-card"><div class="tab"></div><div class="lbl">Active enrollments</div><div class="val">3,102</div><div class="delta">↑ 4.6%</div></div>
+        <div class="stat-card"><div class="tab"></div><div class="lbl">Avg. completion</div><div class="val">71%</div><div class="delta">Across all courses</div></div>
+      </div>
+
+      <div class="panel-head"><h2>Top courses by completion</h2><a href="courses.html">Manage all courses →</a></div>
+      <div class="card" style="margin-bottom:1.8rem;">
+        <div class="table-wrap" style="border:none;">
+          <table class="data">
+            <thead><tr><th>Course</th><th>Instructor</th><th>Enrolled</th><th>Completion</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td><strong>DBMS Fundamentals</strong></td><td>A. Verma</td><td>412</td><td style="width:180px;"><div class="progress-row"><div class="progress-track"><div class="progress-fill" data-value="92" style="width:0"></div></div><span class="pct">92%</span></div></td><td><span class="badge badge-sage">Published</span></td></tr>
+              <tr><td><strong>Full Stack Development</strong></td><td>R. Nair</td><td>680</td><td><div class="progress-row"><div class="progress-track"><div class="progress-fill" data-value="74" style="width:0"></div></div><span class="pct">74%</span></div></td><td><span class="badge badge-sage">Published</span></td></tr>
+              <tr><td><strong>Python for Data Science</strong></td><td>S. Iyer</td><td>551</td><td><div class="progress-row"><div class="progress-track"><div class="progress-fill" data-value="58" style="width:0"></div></div><span class="pct">58%</span></div></td><td><span class="badge badge-sage">Published</span></td></tr>
+              <tr><td><strong>Machine Learning Basics</strong></td><td>K. Menon</td><td>203</td><td><div class="progress-row"><div class="progress-track"><div class="progress-fill" data-value="31" style="width:0"></div></div><span class="pct">31%</span></div></td><td><span class="badge badge-gold">Draft</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card card-pad">
+        <div class="panel-head"><h2>Recent enrollments</h2></div>
+        <ul>
+          <li class="notif-item"><div class="n-icon">📩</div><div style="flex:1;"><strong>Meera Sen</strong><p class="muted" style="margin:.1rem 0 0; font-size:.85rem;">enrolled in Machine Learning Basics</p></div><span class="n-time">10 min ago</span></li>
+          <li class="notif-item"><div class="n-icon">📩</div><div style="flex:1;"><strong>Devansh Patel</strong><p class="muted" style="margin:.1rem 0 0; font-size:.85rem;">enrolled in Full Stack Development</p></div><span class="n-time">1 hour ago</span></li>
+          <li class="notif-item"><div class="n-icon">🎓</div><div style="flex:1;"><strong>Rahul Kapoor</strong><p class="muted" style="margin:.1rem 0 0; font-size:.85rem;">completed DBMS Fundamentals</p></div><span class="n-time">3 hours ago</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

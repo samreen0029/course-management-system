@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Full Stack Development — Course Details</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar" id="sidebar">
+    <a href="student-dashboard.html" class="brand"><span class="mark">C</span> Coursework</a>
+    <div class="user-card"><div class="name">Ananya Sharma</div><div class="role">Student · CS Dept.</div></div>
+    <div class="side-section-label">Menu</div>
+    <nav class="side-nav">
+      <a href="student-dashboard.html"><span class="icon">▤</span> Dashboard</a>
+      <a href="browse-courses.html" class="active"><span class="icon">⌕</span> Browse Courses</a>
+      <a href="my-courses.html"><span class="icon">▥</span> My Courses</a>
+      <a href="progress.html"><span class="icon">◔</span> Progress</a>
+      <a href="notifications.html"><span class="icon">◍</span> Notifications</a>
+    </nav>
+    <div class="side-section-label">Account</div>
+    <nav class="side-nav">
+      <a href="#"><span class="icon">⚙</span> Settings</a>
+      <a href="index.html"><span class="icon">⏻</span> Log out</a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="hamburger" aria-label="Toggle menu">☰</button>
+      <div class="search"><span>⌕</span><input type="text" placeholder="Search courses..."></div>
+      <div class="right">
+        <a href="notifications.html" class="bell"><span>🔔</span><span class="dot"></span></a>
+        <div class="avatar">AS</div>
+      </div>
+    </header>
+
+    <div class="content">
+      <a href="browse-courses.html" class="muted" style="font-size:.85rem;">← Back to courses</a>
+
+      <div style="display:grid; grid-template-columns: 2fr 1fr; gap:2rem; margin-top:1rem;">
+        <div>
+          <span class="eyebrow">Web · 12 weeks</span>
+          <h1>Full Stack Development</h1>
+          <p>Learn to design, build, and deploy complete web applications — from
+          markup and styling through to a working API and database. By the end
+          you'll have shipped a full project across the stack.</p>
+
+          <h3>What you'll learn</h3>
+          <div class="module-list" style="margin-bottom:1.6rem;">
+            <div class="module-item"><div class="module-check">1</div><div class="m-title">HTML &amp; semantic markup</div><span class="m-meta">Module 1</span></div>
+            <div class="module-item"><div class="module-check">2</div><div class="m-title">CSS &amp; responsive layout</div><span class="m-meta">Module 2</span></div>
+            <div class="module-item"><div class="module-check">3</div><div class="m-title">JavaScript fundamentals</div><span class="m-meta">Module 3</span></div>
+            <div class="module-item"><div class="module-check">4</div><div class="m-title">React components</div><span class="m-meta">Module 4</span></div>
+            <div class="module-item"><div class="module-check">5</div><div class="m-title">Node.js &amp; Express APIs</div><span class="m-meta">Module 5</span></div>
+            <div class="module-item"><div class="module-check">6</div><div class="m-title">MongoDB &amp; data modeling</div><span class="m-meta">Module 6</span></div>
+          </div>
+
+          <h3>Instructor</h3>
+          <div class="flex items-center gap-2">
+            <div class="avatar" style="width:48px; height:48px; font-size:1.1rem;">RN</div>
+            <div><strong>Rohan Nair</strong><p class="muted" style="margin:0; font-size:.85rem;">Senior Full Stack Engineer, 8 years teaching experience</p></div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card card-pad" style="position:sticky; top:90px;">
+            <div class="course-thumb" style="margin:-1.4rem -1.4rem 1rem; border-radius:10px 10px 0 0;"><span class="cat-tag">Web</span><span class="glyph">FS</span></div>
+            <div class="flex justify-between" style="margin-bottom:.6rem;"><span class="muted" style="font-size:.85rem;">Duration</span><strong style="font-size:.85rem;">12 weeks</strong></div>
+            <div class="flex justify-between" style="margin-bottom:.6rem;"><span class="muted" style="font-size:.85rem;">Modules</span><strong style="font-size:.85rem;">6</strong></div>
+            <div class="flex justify-between" style="margin-bottom:1rem;"><span class="muted" style="font-size:.85rem;">Category</span><span class="badge badge-teal">Web</span></div>
+            <a href="enrollment-success.html" class="btn btn-gold btn-block">Enroll in this course</a>
+            <a href="course-content.html" class="btn btn-ghost btn-block" style="margin-top:.6rem;">Preview content</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

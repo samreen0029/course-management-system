@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notifications — Coursework</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar" id="sidebar">
+    <a href="student-dashboard.html" class="brand"><span class="mark">C</span> Coursework</a>
+    <div class="user-card"><div class="name">Ananya Sharma</div><div class="role">Student · CS Dept.</div></div>
+    <div class="side-section-label">Menu</div>
+    <nav class="side-nav">
+      <a href="student-dashboard.html"><span class="icon">▤</span> Dashboard</a>
+      <a href="browse-courses.html"><span class="icon">⌕</span> Browse Courses</a>
+      <a href="my-courses.html"><span class="icon">▥</span> My Courses</a>
+      <a href="progress.html"><span class="icon">◔</span> Progress</a>
+      <a href="notifications.html" class="active"><span class="icon">◍</span> Notifications</a>
+    </nav>
+    <div class="side-section-label">Account</div>
+    <nav class="side-nav">
+      <a href="#"><span class="icon">⚙</span> Settings</a>
+      <a href="index.html"><span class="icon">⏻</span> Log out</a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="hamburger" aria-label="Toggle menu">☰</button>
+      <div class="search"><span>⌕</span><input type="text" placeholder="Search courses..."></div>
+      <div class="right">
+        <a href="notifications.html" class="bell"><span>🔔</span><span class="dot"></span></a>
+        <div class="avatar">AS</div>
+      </div>
+    </header>
+
+    <div class="content">
+      <span class="eyebrow">Module 7 — Notifications</span>
+      <div class="panel-head">
+        <h1>Notifications</h1>
+        <a href="#" class="btn btn-ghost btn-sm">Mark all as read</a>
+      </div>
+
+      <div class="card">
+        <ul>
+          <li class="notif-item unread">
+            <span class="notif-dot"></span>
+            <div class="n-icon">✓</div>
+            <div style="flex:1;"><strong>Module completed</strong><p class="muted" style="margin:.1rem 0 0; font-size:.85rem;">You finished "React Components" in Full Stack Development. Keep going — Node.js APIs is next.</p></div>
+            <span class="n-time">2 hours ago</span>
+          </li>
+          <li class="notif-item unread">
+            <span class="notif-dot"></span>
+            <div class="n-icon">🎓</div>
+            <div style="flex:1;"><strong>New course available</strong><p class="muted" style="margin:.1rem 0 0; font-size:.85rem;">Cloud Computing Basics was just added to the catalog by T. Roy.</p></div>
+            <span class="n-time">1 day ago</span>
+          </li>
+          <li class="notif-item">
+            <span class="notif-dot" style="background:transparent;"></span>
+            <div class="n-icon">📩</div>
+            <div style="flex:1;"><strong>Enrollment confirmed</strong><p class="muted" style="margin:.1rem 0 0; font-size:.85rem;">You're enrolled in Python for Data Science. It's now in My Courses.</p></div>
+            <span class="n-time">3 days ago</span>
+          </li>
+          <li class="notif-item">
+            <span class="notif-dot" style="background:transparent;"></span>
+            <div class="n-icon">⏰</div>
+            <div style="flex:1;"><strong>Assignment reminder</strong><p class="muted" style="margin:.1rem 0 0; font-size:.85rem;">The DBMS Fundamentals project submission is due in 2 days.</p></div>
+            <span class="n-time">4 days ago</span>
+          </li>
+          <li class="notif-item">
+            <span class="notif-dot" style="background:transparent;"></span>
+            <div class="n-icon">🏆</div>
+            <div style="flex:1;"><strong>Certificate ready</strong><p class="muted" style="margin:.1rem 0 0; font-size:.85rem;">Your certificate for DBMS Fundamentals is ready to download.</p></div>
+            <span class="n-time">1 week ago</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

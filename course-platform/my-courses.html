@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Courses — Coursework</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar" id="sidebar">
+    <a href="student-dashboard.html" class="brand"><span class="mark">C</span> Coursework</a>
+    <div class="user-card"><div class="name">Ananya Sharma</div><div class="role">Student · CS Dept.</div></div>
+    <div class="side-section-label">Menu</div>
+    <nav class="side-nav">
+      <a href="student-dashboard.html"><span class="icon">▤</span> Dashboard</a>
+      <a href="browse-courses.html"><span class="icon">⌕</span> Browse Courses</a>
+      <a href="my-courses.html" class="active"><span class="icon">▥</span> My Courses</a>
+      <a href="progress.html"><span class="icon">◔</span> Progress</a>
+      <a href="notifications.html"><span class="icon">◍</span> Notifications</a>
+    </nav>
+    <div class="side-section-label">Account</div>
+    <nav class="side-nav">
+      <a href="#"><span class="icon">⚙</span> Settings</a>
+      <a href="index.html"><span class="icon">⏻</span> Log out</a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="hamburger" aria-label="Toggle menu">☰</button>
+      <div class="search"><span>⌕</span><input type="text" placeholder="Search courses..."></div>
+      <div class="right">
+        <a href="notifications.html" class="bell"><span>🔔</span><span class="dot"></span></a>
+        <div class="avatar">AS</div>
+      </div>
+    </header>
+
+    <div class="content">
+      <span class="eyebrow">Module 3 — Course Enrollment</span>
+      <div class="panel-head"><h1>My courses</h1></div>
+
+      <div class="tab-strip">
+        <button class="active">All (6)</button>
+        <button>In progress (4)</button>
+        <button>Completed (2)</button>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data">
+          <thead><tr><th>Course</th><th>Instructor</th><th>Progress</th><th>Status</th><th></th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Full Stack Development</strong></td>
+              <td>R. Nair</td>
+              <td style="width:180px;"><div class="progress-row"><div class="progress-track"><div class="progress-fill" data-value="80" style="width:0"></div></div><span class="pct">80%</span></div></td>
+              <td><span class="badge badge-gold">In progress</span></td>
+              <td><a href="course-content.html" class="btn btn-primary btn-sm">Resume</a></td>
+            </tr>
+            <tr>
+              <td><strong>Python for Data Science</strong></td>
+              <td>S. Iyer</td>
+              <td><div class="progress-row"><div class="progress-track"><div class="progress-fill" data-value="45" style="width:0"></div></div><span class="pct">45%</span></div></td>
+              <td><span class="badge badge-gold">In progress</span></td>
+              <td><a href="course-content.html" class="btn btn-primary btn-sm">Resume</a></td>
+            </tr>
+            <tr>
+              <td><strong>UI/UX Design Principles</strong></td>
+              <td>M. Sen</td>
+              <td><div class="progress-row"><div class="progress-track"><div class="progress-fill" data-value="20" style="width:0"></div></div><span class="pct">20%</span></div></td>
+              <td><span class="badge badge-gold">In progress</span></td>
+              <td><a href="course-content.html" class="btn btn-primary btn-sm">Resume</a></td>
+            </tr>
+            <tr>
+              <td><strong>Cloud Computing Basics</strong></td>
+              <td>T. Roy</td>
+              <td><div class="progress-row"><div class="progress-track"><div class="progress-fill" data-value="8" style="width:0"></div></div><span class="pct">8%</span></div></td>
+              <td><span class="badge badge-gold">In progress</span></td>
+              <td><a href="course-content.html" class="btn btn-primary btn-sm">Resume</a></td>
+            </tr>
+            <tr>
+              <td><strong>DBMS Fundamentals</strong></td>
+              <td>A. Verma</td>
+              <td><div class="progress-row"><div class="progress-track"><div class="progress-fill" data-value="100" style="width:0"></div></div><span class="pct">100%</span></div></td>
+              <td><span class="badge badge-sage">Completed</span></td>
+              <td><a href="certificate.html" class="btn btn-outline btn-sm">Certificate</a></td>
+            </tr>
+            <tr>
+              <td><strong>Intro to HTML &amp; CSS</strong></td>
+              <td>R. Nair</td>
+              <td><div class="progress-row"><div class="progress-track"><div class="progress-fill" data-value="100" style="width:0"></div></div><span class="pct">100%</span></div></td>
+              <td><span class="badge badge-sage">Completed</span></td>
+              <td><a href="certificate.html" class="btn btn-outline btn-sm">Certificate</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

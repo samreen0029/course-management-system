@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create your account — Coursework</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="auth-wrap">
+
+  <aside class="auth-side">
+    <a href="index.html" class="brand"><span class="mark">C</span> Coursework</a>
+    <div class="auth-quote">
+      <p class="big">“I finally have one place to see every course I'm enrolled in and exactly how far I've gotten.”</p>
+      <div class="who">— Priya N., Full Stack Development cohort</div>
+    </div>
+    <div class="auth-stats">
+      <div class="stat"><b>1,240</b><span>Students enrolled</span></div>
+      <div class="stat"><b>86</b><span>Active courses</span></div>
+      <div class="stat"><b>94%</b><span>Completion rate</span></div>
+    </div>
+  </aside>
+
+  <div class="auth-form-side">
+    <div class="auth-card">
+      <span class="eyebrow">Module 1 — User Authentication</span>
+      <h1 style="font-size:1.7rem;">Create your account</h1>
+      <p class="muted" style="margin-bottom:1.4rem;">Register to browse courses and start tracking your progress.</p>
+
+      <form data-demo-redirect="login.html" novalidate>
+        <div class="form-error">Please fill in all required fields.</div>
+
+        <div class="field">
+          <label for="fullname">Full name</label>
+          <input class="input" type="text" id="fullname" name="fullname" placeholder="Ananya Sharma" required>
+        </div>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input class="input" type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="field">
+          <label for="department">Department</label>
+          <select class="input" id="department" name="department" required>
+            <option value="" selected disabled>Select department</option>
+            <option>Computer Science</option>
+            <option>Information Technology</option>
+            <option>Electronics</option>
+            <option>Mechanical</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="input-group">
+            <input class="input" type="password" id="password" name="password" placeholder="At least 8 characters" required>
+            <button type="button" class="toggle-pass">SHOW</button>
+          </div>
+          <div class="hint">Passwords are encrypted before they're stored.</div>
+        </div>
+        <div class="field">
+          <label class="checkline"><input type="checkbox" required> I agree to the Terms and Privacy Policy</label>
+        </div>
+        <button type="submit" class="btn btn-gold btn-block">Create account</button>
+      </form>
+
+      <div class="form-foot-link">Already have an account? <a href="login.html">Log in</a></div>
+    </div>
+  </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 4: React Components — Coursework</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar" id="sidebar">
+    <a href="student-dashboard.html" class="brand"><span class="mark">C</span> Coursework</a>
+    <div class="user-card"><div class="name">Ananya Sharma</div><div class="role">Student · CS Dept.</div></div>
+    <div class="side-section-label">Menu</div>
+    <nav class="side-nav">
+      <a href="student-dashboard.html"><span class="icon">▤</span> Dashboard</a>
+      <a href="browse-courses.html"><span class="icon">⌕</span> Browse Courses</a>
+      <a href="my-courses.html" class="active"><span class="icon">▥</span> My Courses</a>
+      <a href="progress.html"><span class="icon">◔</span> Progress</a>
+      <a href="notifications.html"><span class="icon">◍</span> Notifications</a>
+    </nav>
+    <div class="side-section-label">Account</div>
+    <nav class="side-nav">
+      <a href="#"><span class="icon">⚙</span> Settings</a>
+      <a href="index.html"><span class="icon">⏻</span> Log out</a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="hamburger" aria-label="Toggle menu">☰</button>
+      <div class="search"><span>⌕</span><input type="text" placeholder="Search courses..."></div>
+      <div class="right">
+        <a href="notifications.html" class="bell"><span>🔔</span><span class="dot"></span></a>
+        <div class="avatar">AS</div>
+      </div>
+    </header>
+
+    <div class="content" style="display:grid; grid-template-columns: 1fr 300px; gap:2rem; max-width:1180px;">
+      <div>
+        <a href="course-content.html" class="muted" style="font-size:.85rem;">← Full Stack Development</a>
+        <span class="eyebrow" style="display:block; margin-top:.9rem;">Module 4 of 6</span>
+        <h1>React Components</h1>
+        <p>Components are the building blocks of a React application. In this
+        module you'll learn how to break a UI into components, pass data
+        between them with props, and manage state with hooks.</p>
+
+        <a href="video-player.html" class="video-frame" style="margin-bottom:1.5rem; text-decoration:none;">
+          <div class="play-btn">▶</div>
+        </a>
+
+        <h3>In this lesson</h3>
+        <ul style="margin-bottom:1.5rem;">
+          <li style="padding:.4rem 0; border-bottom:1px solid var(--line);">Why component-based UI makes large apps maintainable</li>
+          <li style="padding:.4rem 0; border-bottom:1px solid var(--line);">Function components and JSX syntax</li>
+          <li style="padding:.4rem 0; border-bottom:1px solid var(--line);">Passing data down with props</li>
+          <li style="padding:.4rem 0;">Managing local state with <code>useState</code></li>
+        </ul>
+
+        <div class="flex justify-between" style="border-top:1px solid var(--line); padding-top:1.4rem;">
+          <button class="btn btn-outline">← Previous: JavaScript Fundamentals</button>
+          <button class="btn btn-gold" onclick="this.closest('form')||true;">Mark module as completed ✓</button>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card card-pad">
+          <h3 style="font-size:1rem;">Course modules</h3>
+          <div class="module-list">
+            <div class="module-item complete" style="padding:.55rem .7rem;"><div class="module-check" style="width:20px;height:20px;">✓</div><div class="m-title" style="font-size:.82rem;">1. HTML</div></div>
+            <div class="module-item complete" style="padding:.55rem .7rem;"><div class="module-check" style="width:20px;height:20px;">✓</div><div class="m-title" style="font-size:.82rem;">2. CSS</div></div>
+            <div class="module-item complete" style="padding:.55rem .7rem;"><div class="module-check" style="width:20px;height:20px;">✓</div><div class="m-title" style="font-size:.82rem;">3. JavaScript</div></div>
+            <div class="module-item current" style="padding:.55rem .7rem;"><div class="module-check" style="width:20px;height:20px;">4</div><div class="m-title" style="font-size:.82rem;">4. React Components</div></div>
+            <div class="module-item" style="padding:.55rem .7rem;"><div class="module-check" style="width:20px;height:20px;">5</div><div class="m-title" style="font-size:.82rem;">5. Node.js APIs</div></div>
+            <div class="module-item" style="padding:.55rem .7rem;"><div class="module-check" style="width:20px;height:20px;">6</div><div class="m-title" style="font-size:.82rem;">6. MongoDB</div></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

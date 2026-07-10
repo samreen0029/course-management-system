@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Full Stack Development — Course Content</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar" id="sidebar">
+    <a href="student-dashboard.html" class="brand"><span class="mark">C</span> Coursework</a>
+    <div class="user-card"><div class="name">Ananya Sharma</div><div class="role">Student · CS Dept.</div></div>
+    <div class="side-section-label">Menu</div>
+    <nav class="side-nav">
+      <a href="student-dashboard.html"><span class="icon">▤</span> Dashboard</a>
+      <a href="browse-courses.html"><span class="icon">⌕</span> Browse Courses</a>
+      <a href="my-courses.html" class="active"><span class="icon">▥</span> My Courses</a>
+      <a href="progress.html"><span class="icon">◔</span> Progress</a>
+      <a href="notifications.html"><span class="icon">◍</span> Notifications</a>
+    </nav>
+    <div class="side-section-label">Account</div>
+    <nav class="side-nav">
+      <a href="#"><span class="icon">⚙</span> Settings</a>
+      <a href="index.html"><span class="icon">⏻</span> Log out</a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="hamburger" aria-label="Toggle menu">☰</button>
+      <div class="search"><span>⌕</span><input type="text" placeholder="Search courses..."></div>
+      <div class="right">
+        <a href="notifications.html" class="bell"><span>🔔</span><span class="dot"></span></a>
+        <div class="avatar">AS</div>
+      </div>
+    </header>
+
+    <div class="content">
+      <a href="my-courses.html" class="muted" style="font-size:.85rem;">← My courses</a>
+      <span class="eyebrow" style="display:block; margin-top:.9rem;">Module 4 — Learning Management</span>
+      <h1>Full Stack Development</h1>
+
+      <div class="progress-row" style="max-width:420px; margin-bottom:1.8rem;">
+        <div class="progress-track"><div class="progress-fill" data-value="80" style="width:0"></div></div>
+        <span class="pct">80%</span>
+      </div>
+
+      <div class="module-list">
+        <div class="module-item complete">
+          <div class="module-check">✓</div>
+          <div style="flex:1;"><div class="m-title">1. HTML &amp; Semantic Markup</div><span class="m-meta">45 min · Video + reading</span></div>
+          <a href="module.html" class="btn btn-ghost btn-sm">Review</a>
+        </div>
+        <div class="module-item complete">
+          <div class="module-check">✓</div>
+          <div style="flex:1;"><div class="m-title">2. CSS &amp; Responsive Layout</div><span class="m-meta">1h 10min · Video + reading</span></div>
+          <a href="module.html" class="btn btn-ghost btn-sm">Review</a>
+        </div>
+        <div class="module-item complete">
+          <div class="module-check">✓</div>
+          <div style="flex:1;"><div class="m-title">3. JavaScript Fundamentals</div><span class="m-meta">1h 30min · Video + reading</span></div>
+          <a href="module.html" class="btn btn-ghost btn-sm">Review</a>
+        </div>
+        <div class="module-item current">
+          <div class="module-check">4</div>
+          <div style="flex:1;"><div class="m-title">4. React Components</div><span class="m-meta">1h 20min · Video + exercise · In progress</span></div>
+          <a href="module.html" class="btn btn-gold btn-sm">Continue</a>
+        </div>
+        <div class="module-item">
+          <div class="module-check">5</div>
+          <div style="flex:1;"><div class="m-title">5. Node.js &amp; Express APIs</div><span class="m-meta">1h 45min · Video + reading</span></div>
+          <a href="module.html" class="btn btn-ghost btn-sm">Locked until Module 4</a>
+        </div>
+        <div class="module-item">
+          <div class="module-check">6</div>
+          <div style="flex:1;"><div class="m-title">6. MongoDB &amp; Data Modeling</div><span class="m-meta">1h · Video + reading</span></div>
+          <a href="module.html" class="btn btn-ghost btn-sm">Locked until Module 5</a>
+        </div>
+      </div>
+
+      <div class="card card-pad" style="margin-top:1.8rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <div>
+          <strong>Need the raw files?</strong>
+          <p class="muted" style="margin:.2rem 0 0; font-size:.85rem;">Slides, cheat sheets, and starter code for this course.</p>
+        </div>
+        <a href="materials.html" class="btn btn-outline">Open materials</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

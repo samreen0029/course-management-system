@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>React Components — Video</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar" id="sidebar">
+    <a href="student-dashboard.html" class="brand"><span class="mark">C</span> Coursework</a>
+    <div class="user-card"><div class="name">Ananya Sharma</div><div class="role">Student · CS Dept.</div></div>
+    <div class="side-section-label">Menu</div>
+    <nav class="side-nav">
+      <a href="student-dashboard.html"><span class="icon">▤</span> Dashboard</a>
+      <a href="browse-courses.html"><span class="icon">⌕</span> Browse Courses</a>
+      <a href="my-courses.html" class="active"><span class="icon">▥</span> My Courses</a>
+      <a href="progress.html"><span class="icon">◔</span> Progress</a>
+      <a href="notifications.html"><span class="icon">◍</span> Notifications</a>
+    </nav>
+    <div class="side-section-label">Account</div>
+    <nav class="side-nav">
+      <a href="#"><span class="icon">⚙</span> Settings</a>
+      <a href="index.html"><span class="icon">⏻</span> Log out</a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="hamburger" aria-label="Toggle menu">☰</button>
+      <div class="search"><span>⌕</span><input type="text" placeholder="Search courses..."></div>
+      <div class="right">
+        <a href="notifications.html" class="bell"><span>🔔</span><span class="dot"></span></a>
+        <div class="avatar">AS</div>
+      </div>
+    </header>
+
+    <div class="content" style="max-width:860px;">
+      <a href="module.html" class="muted" style="font-size:.85rem;">← Back to module</a>
+      <span class="eyebrow" style="display:block; margin-top:.9rem;">Module 4 — React Components</span>
+      <h1>4.2 — Building your first component</h1>
+
+      <div class="video-frame">
+        <div class="play-btn">▶</div>
+      </div>
+      <div class="video-controls">
+        <span class="time">04:12</span>
+        <div class="bar"><div class="played"></div></div>
+        <span class="time">18:40</span>
+        <span class="muted" style="font-size:.8rem;">1x</span>
+      </div>
+
+      <div class="flex justify-between items-center" style="margin-top:1.6rem;">
+        <div>
+          <h3 style="margin-bottom:.3rem;">About this lesson</h3>
+          <p class="muted" style="font-size:.88rem;">We build a small <code>ProfileCard</code> component from scratch, covering JSX, props, and default exports.</p>
+        </div>
+        <a href="module.html" class="btn btn-gold">Mark as watched ✓</a>
+      </div>
+
+      <div class="card card-pad" style="margin-top:1rem;">
+        <h3 style="font-size:.95rem;">Up next</h3>
+        <div class="flex justify-between items-center">
+          <span class="muted" style="font-size:.86rem;">4.3 — Passing props between components</span>
+          <a href="video-player.html" class="btn btn-ghost btn-sm">Play →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manage Courses — Coursework</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar" id="sidebar">
+    <a href="admin-dashboard.html" class="brand"><span class="mark">C</span> Coursework</a>
+    <div class="user-card"><div class="name">Admin — R. Nair</div><div class="role">Administrator</div></div>
+    <div class="side-section-label">Menu</div>
+    <nav class="side-nav">
+      <a href="admin-dashboard.html"><span class="icon">▤</span> Dashboard</a>
+      <a href="courses.html" class="active"><span class="icon">▥</span> Manage Courses</a>
+      <a href="#"><span class="icon">☺</span> Students</a>
+      <a href="#"><span class="icon">◔</span> Enrollments</a>
+      <a href="#"><span class="icon">▦</span> Reports</a>
+    </nav>
+    <div class="side-section-label">Account</div>
+    <nav class="side-nav">
+      <a href="#"><span class="icon">⚙</span> Settings</a>
+      <a href="index.html"><span class="icon">⏻</span> Log out</a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="hamburger" aria-label="Toggle menu">☰</button>
+      <div class="search"><span>⌕</span><input type="text" placeholder="Search courses..."></div>
+      <div class="right">
+        <a href="notifications.html" class="bell"><span>🔔</span><span class="dot"></span></a>
+        <div class="avatar">RN</div>
+      </div>
+    </header>
+
+    <div class="content">
+      <span class="eyebrow">Module 2 — Course Management</span>
+      <div class="panel-head">
+        <h1>Manage courses</h1>
+        <a href="add-course.html" class="btn btn-gold">+ Add course</a>
+      </div>
+
+      <div class="tab-strip">
+        <button class="active">All (86)</button>
+        <button>Published (74)</button>
+        <button>Draft (12)</button>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data">
+          <thead><tr><th>Course</th><th>Category</th><th>Instructor</th><th>Duration</th><th>Enrolled</th><th>Status</th><th></th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Full Stack Development</strong></td>
+              <td><span class="badge badge-teal">Web</span></td>
+              <td>R. Nair</td>
+              <td>12 weeks</td>
+              <td>680</td>
+              <td><span class="badge badge-sage">Published</span></td>
+              <td><div class="row-actions"><a href="course-details.html" class="icon-btn" title="View">👁</a><a href="edit-course.html" class="icon-btn" title="Edit">✎</a><a href="#" class="icon-btn" title="Delete">🗑</a></div></td>
+            </tr>
+            <tr>
+              <td><strong>Python for Data Science</strong></td>
+              <td><span class="badge badge-gold">Programming</span></td>
+              <td>S. Iyer</td>
+              <td>8 weeks</td>
+              <td>551</td>
+              <td><span class="badge badge-sage">Published</span></td>
+              <td><div class="row-actions"><a href="course-details.html" class="icon-btn" title="View">👁</a><a href="edit-course.html" class="icon-btn" title="Edit">✎</a><a href="#" class="icon-btn" title="Delete">🗑</a></div></td>
+            </tr>
+            <tr>
+              <td><strong>DBMS Fundamentals</strong></td>
+              <td><span class="badge badge-muted">Database</span></td>
+              <td>A. Verma</td>
+              <td>6 weeks</td>
+              <td>412</td>
+              <td><span class="badge badge-sage">Published</span></td>
+              <td><div class="row-actions"><a href="course-details.html" class="icon-btn" title="View">👁</a><a href="edit-course.html" class="icon-btn" title="Edit">✎</a><a href="#" class="icon-btn" title="Delete">🗑</a></div></td>
+            </tr>
+            <tr>
+              <td><strong>Machine Learning Basics</strong></td>
+              <td><span class="badge badge-brick">AI</span></td>
+              <td>K. Menon</td>
+              <td>10 weeks</td>
+              <td>203</td>
+              <td><span class="badge badge-gold">Draft</span></td>
+              <td><div class="row-actions"><a href="course-details.html" class="icon-btn" title="View">👁</a><a href="edit-course.html" class="icon-btn" title="Edit">✎</a><a href="#" class="icon-btn" title="Delete">🗑</a></div></td>
+            </tr>
+            <tr>
+              <td><strong>UI/UX Design Principles</strong></td>
+              <td><span class="badge badge-teal">Web</span></td>
+              <td>M. Sen</td>
+              <td>5 weeks</td>
+              <td>318</td>
+              <td><span class="badge badge-sage">Published</span></td>
+              <td><div class="row-actions"><a href="course-details.html" class="icon-btn" title="View">👁</a><a href="edit-course.html" class="icon-btn" title="Edit">✎</a><a href="#" class="icon-btn" title="Delete">🗑</a></div></td>
+            </tr>
+            <tr>
+              <td><strong>Cloud Computing Basics</strong></td>
+              <td><span class="badge badge-gold">Programming</span></td>
+              <td>T. Roy</td>
+              <td>7 weeks</td>
+              <td>96</td>
+              <td><span class="badge badge-gold">Draft</span></td>
+              <td><div class="row-actions"><a href="course-details.html" class="icon-btn" title="View">👁</a><a href="edit-course.html" class="icon-btn" title="Edit">✎</a><a href="#" class="icon-btn" title="Delete">🗑</a></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

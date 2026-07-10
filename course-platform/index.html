@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coursework — Learn at your own pace, track every step</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="brand"><span class="mark">C</span> Coursework</a>
+  <div class="links">
+    <a href="browse-courses.html">Browse courses</a>
+    <a href="#modules">How it works</a>
+    <a href="#for-admins">For instructors</a>
+  </div>
+  <div class="cta">
+    <a href="login.html" class="btn btn-ghost btn-sm">Log in</a>
+    <a href="register.html" class="btn btn-primary btn-sm">Get started</a>
+  </div>
+</nav>
+
+<header class="ruled" style="padding: 5rem 2rem 4rem; background:var(--paper);">
+  <div style="max-width:760px; margin:0 auto; text-align:center;">
+    <span class="eyebrow">Course enrollment &amp; progress tracking</span>
+    <h1 style="margin-top:.6rem;">Every course, one open notebook.</h1>
+    <p style="font-size:1.08rem; max-width:560px; margin:0 auto 1.8rem;">
+      Enroll in a course, work through it module by module, and watch your
+      progress bar fill in — like checking items off in a shared notebook,
+      except the notebook remembers everything for you.
+    </p>
+    <div class="flex gap-2 center" style="justify-content:center;">
+      <a href="register.html" class="btn btn-gold">Create your account</a>
+      <a href="browse-courses.html" class="btn btn-outline">Browse courses</a>
+    </div>
+  </div>
+</header>
+
+<section id="modules" style="padding: 3.5rem 2rem; max-width:1080px; margin:0 auto;">
+  <div class="panel-head" style="justify-content:center; text-align:center; flex-direction:column;">
+    <span class="eyebrow">How Coursework is organized</span>
+    <h2>Seven modules, one continuous thread</h2>
+  </div>
+  <div class="stat-grid" style="grid-template-columns: repeat(4,1fr);">
+    <div class="stat-card"><div class="tab"></div><div class="lbl">Module 01</div><div class="val" style="font-size:1.2rem;">Accounts</div><p class="muted" style="margin:0; font-size:.82rem;">Register, log in, and recover access securely.</p></div>
+    <div class="stat-card"><div class="tab"></div><div class="lbl">Module 02–03</div><div class="val" style="font-size:1.2rem;">Enrollment</div><p class="muted" style="margin:0; font-size:.82rem;">Browse the catalog and enroll in a click.</p></div>
+    <div class="stat-card"><div class="tab"></div><div class="lbl">Module 04</div><div class="val" style="font-size:1.2rem;">Learning</div><p class="muted" style="margin:0; font-size:.82rem;">Watch lessons, read materials, mark them done.</p></div>
+    <div class="stat-card"><div class="tab"></div><div class="lbl">Module 05–07</div><div class="val" style="font-size:1.2rem;">Progress</div><p class="muted" style="margin:0; font-size:.82rem;">Track completion, earn certificates, get notified.</p></div>
+  </div>
+</section>
+
+<section id="for-admins" style="padding: 1rem 2rem 4rem; max-width:1080px; margin:0 auto;">
+  <div class="card card-pad" style="display:grid; grid-template-columns: 1fr 1fr; gap:2rem; align-items:center;">
+    <div>
+      <span class="eyebrow">For instructors &amp; admins</span>
+      <h2>Manage the catalog from one dashboard</h2>
+      <p>Add courses, edit modules, and see completion rates across every
+      student — without leaving the same notebook your students use.</p>
+      <a href="admin-dashboard.html" class="btn btn-primary">Open admin dashboard</a>
+    </div>
+    <div>
+      <div class="progress-row" style="margin-bottom:.8rem;">
+        <span class="muted" style="font-size:.8rem; width:110px;">Full Stack Dev</span>
+        <div class="progress-track"><div class="progress-fill" style="width:82%;"></div></div>
+        <span class="pct">82%</span>
+      </div>
+      <div class="progress-row" style="margin-bottom:.8rem;">
+        <span class="muted" style="font-size:.8rem; width:110px;">Data Structures</span>
+        <div class="progress-track"><div class="progress-fill" style="width:47%;"></div></div>
+        <span class="pct">47%</span>
+      </div>
+      <div class="progress-row">
+        <span class="muted" style="font-size:.8rem; width:110px;">UI/UX Design</span>
+        <div class="progress-track"><div class="progress-fill" style="width:100%;"></div></div>
+        <span class="pct">100%</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  © 2026 Coursework. A student course management &amp; learning progress tracking system.
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

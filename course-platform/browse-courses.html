@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Browse Courses — Coursework</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar" id="sidebar">
+    <a href="student-dashboard.html" class="brand"><span class="mark">C</span> Coursework</a>
+    <div class="user-card"><div class="name">Ananya Sharma</div><div class="role">Student · CS Dept.</div></div>
+    <div class="side-section-label">Menu</div>
+    <nav class="side-nav">
+      <a href="student-dashboard.html"><span class="icon">▤</span> Dashboard</a>
+      <a href="browse-courses.html" class="active"><span class="icon">⌕</span> Browse Courses</a>
+      <a href="my-courses.html"><span class="icon">▥</span> My Courses</a>
+      <a href="progress.html"><span class="icon">◔</span> Progress</a>
+      <a href="notifications.html"><span class="icon">◍</span> Notifications</a>
+    </nav>
+    <div class="side-section-label">Account</div>
+    <nav class="side-nav">
+      <a href="#"><span class="icon">⚙</span> Settings</a>
+      <a href="index.html"><span class="icon">⏻</span> Log out</a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="hamburger" aria-label="Toggle menu">☰</button>
+      <div class="search"><span>⌕</span><input type="text" placeholder="Search courses..."></div>
+      <div class="right">
+        <a href="notifications.html" class="bell"><span>🔔</span><span class="dot"></span></a>
+        <div class="avatar">AS</div>
+      </div>
+    </header>
+
+    <div class="content">
+      <span class="eyebrow">Module 3 — Course Enrollment</span>
+      <div class="panel-head">
+        <h1>Browse courses</h1>
+      </div>
+
+      <div class="tab-strip">
+        <button class="active">All courses</button>
+        <button>Web</button>
+        <button>Programming</button>
+        <button>Database</button>
+        <button>AI</button>
+      </div>
+
+      <div class="course-grid">
+        <div class="course-card">
+          <div class="course-thumb"><span class="cat-tag">Web</span><span class="glyph">FS</span></div>
+          <div class="course-body">
+            <h3>Full Stack Development</h3>
+            <div class="course-meta"><span>R. Nair</span><span>12 weeks</span></div>
+            <p class="course-desc">HTML, CSS, JavaScript, React, Node.js and MongoDB — build and ship a complete web app.</p>
+            <div class="course-foot"><span class="badge badge-teal">Enrolled</span><a href="course-details.html" class="btn btn-outline btn-sm">View</a></div>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="course-thumb"><span class="cat-tag">Programming</span><span class="glyph">PY</span></div>
+          <div class="course-body">
+            <h3>Python for Data Science</h3>
+            <div class="course-meta"><span>S. Iyer</span><span>8 weeks</span></div>
+            <p class="course-desc">NumPy, pandas, and visualization fundamentals for working with real datasets.</p>
+            <div class="course-foot"><span class="badge badge-teal">Enrolled</span><a href="course-details.html" class="btn btn-outline btn-sm">View</a></div>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="course-thumb"><span class="cat-tag">Database</span><span class="glyph">DB</span></div>
+          <div class="course-body">
+            <h3>DBMS Fundamentals</h3>
+            <div class="course-meta"><span>A. Verma</span><span>6 weeks</span></div>
+            <p class="course-desc">Relational design, normalization, SQL queries, and transactions.</p>
+            <div class="course-foot"><span class="badge badge-sage">Completed</span><a href="course-details.html" class="btn btn-outline btn-sm">View</a></div>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="course-thumb"><span class="cat-tag">AI</span><span class="glyph">ML</span></div>
+          <div class="course-body">
+            <h3>Machine Learning Basics</h3>
+            <div class="course-meta"><span>K. Menon</span><span>10 weeks</span></div>
+            <p class="course-desc">Supervised learning, model evaluation, and a first hands-on project.</p>
+            <div class="course-foot"><span class="badge badge-muted">Not enrolled</span><a href="course-details.html" class="btn btn-gold btn-sm">Enroll</a></div>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="course-thumb"><span class="cat-tag">Web</span><span class="glyph">UX</span></div>
+          <div class="course-body">
+            <h3>UI/UX Design Principles</h3>
+            <div class="course-meta"><span>M. Sen</span><span>5 weeks</span></div>
+            <p class="course-desc">Layout, color, typography, and usability heuristics for product design.</p>
+            <div class="course-foot"><span class="badge badge-muted">Not enrolled</span><a href="course-details.html" class="btn btn-gold btn-sm">Enroll</a></div>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="course-thumb"><span class="cat-tag">Programming</span><span class="glyph">CL</span></div>
+          <div class="course-body">
+            <h3>Cloud Computing Basics</h3>
+            <div class="course-meta"><span>T. Roy</span><span>7 weeks</span></div>
+            <p class="course-desc">Core cloud concepts, deployment models, and hosting your first app.</p>
+            <div class="course-foot"><span class="badge badge-muted">Not enrolled</span><a href="course-details.html" class="btn btn-gold btn-sm">Enroll</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

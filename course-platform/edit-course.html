@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edit Course — Coursework</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar" id="sidebar">
+    <a href="admin-dashboard.html" class="brand"><span class="mark">C</span> Coursework</a>
+    <div class="user-card"><div class="name">Admin — R. Nair</div><div class="role">Administrator</div></div>
+    <div class="side-section-label">Menu</div>
+    <nav class="side-nav">
+      <a href="admin-dashboard.html"><span class="icon">▤</span> Dashboard</a>
+      <a href="courses.html" class="active"><span class="icon">▥</span> Manage Courses</a>
+      <a href="#"><span class="icon">☺</span> Students</a>
+      <a href="#"><span class="icon">◔</span> Enrollments</a>
+      <a href="#"><span class="icon">▦</span> Reports</a>
+    </nav>
+    <div class="side-section-label">Account</div>
+    <nav class="side-nav">
+      <a href="#"><span class="icon">⚙</span> Settings</a>
+      <a href="index.html"><span class="icon">⏻</span> Log out</a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="hamburger" aria-label="Toggle menu">☰</button>
+      <div class="search"><span>⌕</span><input type="text" placeholder="Search courses..."></div>
+      <div class="right">
+        <a href="notifications.html" class="bell"><span>🔔</span><span class="dot"></span></a>
+        <div class="avatar">RN</div>
+      </div>
+    </header>
+
+    <div class="content" style="max-width:720px;">
+      <a href="courses.html" class="muted" style="font-size:.85rem;">← Manage courses</a>
+      <div class="panel-head" style="margin-top:.9rem;">
+        <div>
+          <span class="eyebrow">Module 2 — Course Management</span>
+          <h1 style="margin-top:.3rem;">Edit course</h1>
+        </div>
+        <span class="badge badge-sage">Published</span>
+      </div>
+
+      <form class="card card-pad" data-demo-redirect="courses.html" novalidate>
+        <div class="form-error">Please fill in all required fields.</div>
+
+        <div class="field">
+          <label for="cname">Course name</label>
+          <input class="input" type="text" id="cname" name="cname" value="Full Stack Development" required>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+          <div class="field">
+            <label for="instructor">Instructor</label>
+            <input class="input" type="text" id="instructor" name="instructor" value="Rohan Nair" required>
+          </div>
+          <div class="field">
+            <label for="duration">Duration (weeks)</label>
+            <input class="input" type="number" id="duration" name="duration" value="12" min="1" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="category">Category</label>
+          <select class="input" id="category" name="category" required>
+            <option>Web</option>
+            <option>Programming</option>
+            <option>Database</option>
+            <option>AI</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="desc">Course description</label>
+          <textarea class="input" id="desc" name="desc" rows="4" required>Learn to design, build, and deploy complete web applications — from markup and styling through to a working API and database.</textarea>
+        </div>
+
+        <div class="field">
+          <label>Modules</label>
+          <div class="module-list">
+            <div class="module-item complete" style="padding:.6rem .8rem;"><div class="module-check" style="width:22px;height:22px;">✓</div><div class="m-title" style="font-size:.85rem;">HTML &amp; Semantic Markup</div><button type="button" class="icon-btn" style="width:28px;height:28px;">✎</button></div>
+            <div class="module-item complete" style="padding:.6rem .8rem;"><div class="module-check" style="width:22px;height:22px;">✓</div><div class="m-title" style="font-size:.85rem;">CSS &amp; Responsive Layout</div><button type="button" class="icon-btn" style="width:28px;height:28px;">✎</button></div>
+            <div class="module-item current" style="padding:.6rem .8rem;"><div class="module-check" style="width:22px;height:22px;">4</div><div class="m-title" style="font-size:.85rem;">React Components</div><button type="button" class="icon-btn" style="width:28px;height:28px;">✎</button></div>
+          </div>
+          <button type="button" class="btn btn-ghost btn-sm" style="margin-top:.6rem;">+ Add module</button>
+        </div>
+
+        <div class="flex justify-between" style="border-top:1px solid var(--line); padding-top:1.2rem;">
+          <button type="button" class="btn btn-danger">Delete course</button>
+          <div class="flex gap-2">
+            <a href="courses.html" class="btn btn-ghost">Cancel</a>
+            <button type="submit" class="btn btn-gold">Save changes</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

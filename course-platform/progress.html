@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Progress — Coursework</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar" id="sidebar">
+    <a href="student-dashboard.html" class="brand"><span class="mark">C</span> Coursework</a>
+    <div class="user-card"><div class="name">Ananya Sharma</div><div class="role">Student · CS Dept.</div></div>
+    <div class="side-section-label">Menu</div>
+    <nav class="side-nav">
+      <a href="student-dashboard.html"><span class="icon">▤</span> Dashboard</a>
+      <a href="browse-courses.html"><span class="icon">⌕</span> Browse Courses</a>
+      <a href="my-courses.html"><span class="icon">▥</span> My Courses</a>
+      <a href="progress.html" class="active"><span class="icon">◔</span> Progress</a>
+      <a href="notifications.html"><span class="icon">◍</span> Notifications</a>
+    </nav>
+    <div class="side-section-label">Account</div>
+    <nav class="side-nav">
+      <a href="#"><span class="icon">⚙</span> Settings</a>
+      <a href="index.html"><span class="icon">⏻</span> Log out</a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="hamburger" aria-label="Toggle menu">☰</button>
+      <div class="search"><span>⌕</span><input type="text" placeholder="Search courses..."></div>
+      <div class="right">
+        <a href="notifications.html" class="bell"><span>🔔</span><span class="dot"></span></a>
+        <div class="avatar">AS</div>
+      </div>
+    </header>
+
+    <div class="content">
+      <span class="eyebrow">Module 5 — Progress Tracking</span>
+      <div class="panel-head"><h1>My progress</h1></div>
+
+      <div class="stat-grid">
+        <div class="stat-card"><div class="tab"></div><div class="lbl">Overall completion</div><div class="val">68%</div><div class="delta">Across 6 courses</div></div>
+        <div class="stat-card"><div class="tab"></div><div class="lbl">Modules completed</div><div class="val">19 / 34</div><div class="delta">15 remaining</div></div>
+        <div class="stat-card"><div class="tab"></div><div class="lbl">Certificates earned</div><div class="val">2</div><div class="delta">DBMS, Intro HTML/CSS</div></div>
+        <div class="stat-card"><div class="tab"></div><div class="lbl">Current streak</div><div class="val">6 days</div><div class="delta">Keep it going</div></div>
+      </div>
+
+      <div class="card card-pad">
+        <h2>Course-by-course progress</h2>
+
+        <div style="margin-bottom:1.6rem;">
+          <div class="panel-head" style="margin-bottom:.5rem;"><h3 style="margin:0;">Full Stack Development</h3><span class="badge badge-gold">80%</span></div>
+          <div class="progress-track" style="margin-bottom:.7rem;"><div class="progress-fill" data-value="80" style="width:0"></div></div>
+          <div class="flex gap-2" style="flex-wrap:wrap;">
+            <span class="badge badge-sage">✓ HTML</span><span class="badge badge-sage">✓ CSS</span><span class="badge badge-sage">✓ JavaScript</span>
+            <span class="badge badge-gold">◔ React</span><span class="badge badge-muted">Node.js</span><span class="badge badge-muted">MongoDB</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom:1.6rem;">
+          <div class="panel-head" style="margin-bottom:.5rem;"><h3 style="margin:0;">Python for Data Science</h3><span class="badge badge-gold">45%</span></div>
+          <div class="progress-track" style="margin-bottom:.7rem;"><div class="progress-fill" data-value="45" style="width:0"></div></div>
+          <div class="flex gap-2" style="flex-wrap:wrap;">
+            <span class="badge badge-sage">✓ Python Basics</span><span class="badge badge-gold">◔ NumPy</span><span class="badge badge-muted">pandas</span><span class="badge badge-muted">Visualization</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="panel-head" style="margin-bottom:.5rem;"><h3 style="margin:0;">DBMS Fundamentals</h3><span class="badge badge-sage">100%</span></div>
+          <div class="progress-track" style="margin-bottom:.7rem;"><div class="progress-fill" data-value="100" style="width:0"></div></div>
+          <div class="flex gap-2" style="flex-wrap:wrap;">
+            <span class="badge badge-sage">✓ ER Modeling</span><span class="badge badge-sage">✓ Normalization</span><span class="badge badge-sage">✓ SQL</span><span class="badge badge-sage">✓ Transactions</span>
+          </div>
+          <a href="certificate.html" class="btn btn-outline btn-sm" style="margin-top:.8rem;">View certificate</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
