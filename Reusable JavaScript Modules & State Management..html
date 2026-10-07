@@ -1,0 +1,328 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modular JavaScript Application</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            text-align: center;
+        }
+
+        .container {
+            width: 400px;
+            margin: 80px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        input, select {
+            width: 90%;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        #message {
+            color: red;
+        }
+
+        #dashboard {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Course Management App</h1>
+
+    <!-- Login Section -->
+    <div id="loginSection">
+
+        <h2>Login</h2>
+
+        <input type="text" id="username" placeholder="Username">
+
+        <input type="password" id="password" placeholder="Password">
+
+        <button onclick="login()">Login</button>
+
+        <p id="message"></p>
+
+    </div>
+
+
+    <!-- Dashboard Section -->
+    <div id="dashboard">
+
+        <h2>Welcome, <span id="userDisplay"></span></h2>
+
+        <label>Select Course:</label>
+
+        <select id="course" onchange="selectCourse()">
+
+            <option value="">Select Course</option>
+
+            <option value="JavaScript">
+                JavaScript
+            </option>
+
+            <option value="Python">
+                Python
+            </option>
+
+            <option value="Artificial Intelligence">
+                Artificial Intelligence
+            </option>
+
+        </select>
+
+        <p id="selectedCourse"></p>
+
+        <button onclick="logout()">Logout</button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+// ===============================
+// CENTRALIZED APPLICATION STATE
+// ===============================
+
+let state = {
+    user: null,
+    selectedCourse: null
+};
+
+
+// ===============================
+// VALIDATION MODULE
+// ===============================
+
+function validateLogin(username, password) {
+
+    if (username === "" || password === "") {
+
+        return false;
+
+    }
+
+    return true;
+}
+
+
+// ===============================
+// API MODULE
+// ===============================
+
+function loginAPI(username, password) {
+
+    return new Promise(function(resolve) {
+
+        setTimeout(function() {
+
+            if (username === "admin" && password === "1234") {
+
+                resolve({
+                    success: true,
+                    user: username
+                });
+
+            } else {
+
+                resolve({
+                    success: false
+                });
+
+            }
+
+        }, 500);
+
+    });
+}
+
+
+// ===============================
+// AUTH MODULE
+// ===============================
+
+async function login() {
+
+    let username =
+        document.getElementById("username").value;
+
+    let password =
+        document.getElementById("password").value;
+
+
+    // Validation
+
+    if (!validateLogin(username, password)) {
+
+        showMessage("Please enter username and password.");
+
+        return;
+    }
+
+
+    // API call
+
+    let result =
+        await loginAPI(username, password);
+
+
+    if (result.success) {
+
+        state.user = result.user;
+
+        // Store temporary login information
+
+        localStorage.setItem(
+            "loggedInUser",
+            result.user
+        );
+
+        showDashboard();
+
+    } else {
+
+        showMessage("Invalid username or password.");
+
+    }
+
+}
+
+
+// ===============================
+// COURSE STATE MANAGEMENT
+// ===============================
+
+function selectCourse() {
+
+    let course =
+        document.getElementById("course").value;
+
+
+    state.selectedCourse = course;
+
+
+    if (course !== "") {
+
+        document.getElementById("selectedCourse")
+            .innerText =
+            "Selected Course: " + course;
+
+    } else {
+
+        document.getElementById("selectedCourse")
+            .innerText = "";
+
+    }
+
+}
+
+
+// ===============================
+// UI MODULE
+// ===============================
+
+function showDashboard() {
+
+    document.getElementById("loginSection")
+        .style.display = "none";
+
+    document.getElementById("dashboard")
+        .style.display = "block";
+
+    document.getElementById("userDisplay")
+        .innerText = state.user;
+
+}
+
+
+function showLogin() {
+
+    document.getElementById("loginSection")
+        .style.display = "block";
+
+    document.getElementById("dashboard")
+        .style.display = "none";
+
+}
+
+
+function showMessage(message) {
+
+    document.getElementById("message")
+        .innerText = message;
+
+}
+
+
+// ===============================
+// LOGOUT FUNCTION
+// ===============================
+
+function logout() {
+
+    state.user = null;
+
+    state.selectedCourse = null;
+
+    localStorage.removeItem("loggedInUser");
+
+    showLogin();
+
+    document.getElementById("username")
+        .value = "";
+
+    document.getElementById("password")
+        .value = "";
+
+    document.getElementById("course")
+        .value = "";
+
+    document.getElementById("selectedCourse")
+        .innerText = "";
+
+    showMessage("Logged out successfully.");
+
+}
+
+
+// ===============================
+// RESTORE LOGIN STATE
+// ===============================
+
+let savedUser =
+    localStorage.getItem("loggedInUser");
+
+
+if (savedUser) {
+
+    state.user = savedUser;
+
+    showDashboard();
+
+}
+
+</script>
+
+</body>
+</html>
+```
