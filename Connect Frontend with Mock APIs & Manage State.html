@@ -1,0 +1,241 @@
+```jsx
+import React, { createContext, useContext, useEffect, useState } from "react";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  NavLink
+} from "react-router-dom";
+
+import "./App.css";
+
+
+// =====================================================
+// MOCK API
+// =====================================================
+
+const mockAPI = {
+
+  getStudent: () => {
+
+    return new Promise((resolve) => {
+
+      setTimeout(() => {
+
+        resolve({
+          id: 1,
+          name: "Samreen Fathima",
+          email: "samreen@example.com",
+          department: "Computer Science with AI",
+          year: "3rd Year"
+        });
+
+      }, 1000);
+
+    });
+
+  },
+
+
+  getCourses: () => {
+
+    return new Promise((resolve) => {
+
+      setTimeout(() => {
+
+        resolve([
+          {
+            id: 1,
+            name: "Python Programming",
+            instructor: "John",
+            status: "Enrolled"
+          },
+
+          {
+            id: 2,
+            name: "Artificial Intelligence",
+            instructor: "David",
+            status: "Enrolled"
+          },
+
+          {
+            id: 3,
+            name: "Web Development",
+            instructor: "Sarah",
+            status: "Not Enrolled"
+          },
+
+          {
+            id: 4,
+            name: "Machine Learning",
+            instructor: "Robert",
+            status: "Enrolled"
+          }
+        ]);
+
+      }, 1000);
+
+    });
+
+  }
+
+};
+
+
+// =====================================================
+// CONTEXT API
+// =====================================================
+
+const AppContext = createContext();
+
+
+// =====================================================
+// CONTEXT PROVIDER
+// =====================================================
+
+function AppProvider({ children }) {
+
+  const [student, setStudent] = useState(null);
+
+  const [courses, setCourses] = useState([]);
+
+  const [loading, setLoading] = useState(true);
+
+  const [error, setError] = useState("");
+
+
+  // Fetch API data
+
+  useEffect(() => {
+
+    async function fetchData() {
+
+      try {
+
+        setLoading(true);
+
+        const studentData =
+          await mockAPI.getStudent();
+
+        const courseData =
+          await mockAPI.getCourses();
+
+        setStudent(studentData);
+
+        setCourses(courseData);
+
+        setError("");
+
+      }
+
+      catch (err) {
+
+        setError("Failed to load data.");
+
+      }
+
+      finally {
+
+        setLoading(false);
+
+      }
+
+    }
+
+    fetchData();
+
+  }, []);
+
+
+  return (
+
+    <AppContext.Provider
+      value={{
+        student,
+        courses,
+        loading,
+        error
+      }}
+    >
+
+      {children}
+
+    </AppContext.Provider>
+
+  );
+
+}
+
+
+// =====================================================
+// CUSTOM HOOK
+// =====================================================
+
+function useApp() {
+
+  return useContext(AppContext);
+
+}
+
+
+// =====================================================
+// NAVBAR
+// =====================================================
+
+function Navbar() {
+
+  return (
+
+    <nav style={styles.navbar}>
+
+      <h2>Student Portal</h2>
+
+      <div>
+
+        <NavLink
+          to="/"
+          style={styles.link}
+        >
+          Home
+        </NavLink>
+
+        <NavLink
+          to="/dashboard"
+          style={styles.link}
+        >
+          Dashboard
+        </NavLink>
+
+        <NavLink
+          to="/courses"
+          style={styles.link}
+        >
+          Courses
+        </NavLink>
+
+      </div>
+
+    </nav>
+
+  );
+
+}
+
+
+// =====================================================
+// HOME
+// =====================================================
+
+function Home() {
+
+  return (
+
+    <div style={styles.page}>
+
+      <h1>Student Course Management</h1>
+
+      <p>
+        Manage your student information,
+        courses and enrollment status.
+      </
