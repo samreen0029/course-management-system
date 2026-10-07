@@ -1,0 +1,382 @@
+```jsx
+import React from "react";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  NavLink
+} from "react-router-dom";
+
+import "./App.css";
+
+
+// ==========================
+// NAVBAR
+// ==========================
+
+function Navbar() {
+  return (
+    <nav style={styles.navbar}>
+
+      <h2>Course App</h2>
+
+      <div>
+        <NavLink to="/" style={styles.link}>
+          Home
+        </NavLink>
+
+        <NavLink to="/login" style={styles.link}>
+          Login
+        </NavLink>
+
+        <NavLink to="/register" style={styles.link}>
+          Register
+        </NavLink>
+
+        <NavLink to="/dashboard" style={styles.link}>
+          Dashboard
+        </NavLink>
+
+        <NavLink to="/courses" style={styles.link}>
+          Courses
+        </NavLink>
+      </div>
+
+    </nav>
+  );
+}
+
+
+// ==========================
+// FOOTER
+// ==========================
+
+function Footer() {
+  return (
+    <footer style={styles.footer}>
+      <p>© 2026 Course Management App</p>
+    </footer>
+  );
+}
+
+
+// ==========================
+// HOME
+// ==========================
+
+function Home() {
+  return (
+    <div style={styles.page}>
+
+      <h1>Welcome to Course App</h1>
+
+      <p>
+        Learn new skills with our online courses.
+      </p>
+
+      <Link to="/login">
+        <button style={styles.button}>
+          Get Started
+        </button>
+      </Link>
+
+    </div>
+  );
+}
+
+
+// ==========================
+// LOGIN
+// ==========================
+
+function Login() {
+  return (
+    <div style={styles.form}>
+
+      <h1>Login</h1>
+
+      <input
+        type="email"
+        placeholder="Enter Email"
+        style={styles.input}
+      />
+
+      <input
+        type="password"
+        placeholder="Enter Password"
+        style={styles.input}
+      />
+
+      <button style={styles.button}>
+        Login
+      </button>
+
+      <p>
+        Don't have an account?
+
+        <Link to="/register">
+          Register
+        </Link>
+      </p>
+
+    </div>
+  );
+}
+
+
+// ==========================
+// REGISTER
+// ==========================
+
+function Register() {
+  return (
+    <div style={styles.form}>
+
+      <h1>Register</h1>
+
+      <input
+        type="text"
+        placeholder="Enter Name"
+        style={styles.input}
+      />
+
+      <input
+        type="email"
+        placeholder="Enter Email"
+        style={styles.input}
+      />
+
+      <input
+        type="password"
+        placeholder="Create Password"
+        style={styles.input}
+      />
+
+      <button style={styles.button}>
+        Register
+      </button>
+
+      <p>
+        Already have an account?
+
+        <Link to="/login">
+          Login
+        </Link>
+      </p>
+
+    </div>
+  );
+}
+
+
+// ==========================
+// DASHBOARD
+// ==========================
+
+function Dashboard() {
+  return (
+    <div style={styles.page}>
+
+      <h1>Dashboard</h1>
+
+      <p>
+        Welcome to your dashboard!
+      </p>
+
+      <Link to="/courses">
+        <button style={styles.button}>
+          View Courses
+        </button>
+      </Link>
+
+    </div>
+  );
+}
+
+
+// ==========================
+// REUSABLE COURSE CARD
+// ==========================
+
+function CourseCard({ title, description }) {
+  return (
+    <div style={styles.card}>
+
+      <h2>{title}</h2>
+
+      <p>{description}</p>
+
+      <button style={styles.button}>
+        Enroll
+      </button>
+
+    </div>
+  );
+}
+
+
+// ==========================
+// COURSES
+// ==========================
+
+function Courses() {
+  return (
+    <div style={styles.page}>
+
+      <h1>Available Courses</h1>
+
+      <div style={styles.courses}>
+
+        <CourseCard
+          title="JavaScript"
+          description="Learn JavaScript programming."
+        />
+
+        <CourseCard
+          title="Python"
+          description="Learn Python from basics."
+        />
+
+        <CourseCard
+          title="Artificial Intelligence"
+          description="Learn AI and Machine Learning."
+        />
+
+      </div>
+
+    </div>
+  );
+}
+
+
+// ==========================
+// MAIN APP + ROUTING
+// ==========================
+
+function App() {
+
+  return (
+
+    <BrowserRouter>
+
+      <Navbar />
+
+      <Routes>
+
+        <Route
+          path="/"
+          element={<Home />}
+        />
+
+        <Route
+          path="/login"
+          element={<Login />}
+        />
+
+        <Route
+          path="/register"
+          element={<Register />}
+        />
+
+        <Route
+          path="/dashboard"
+          element={<Dashboard />}
+        />
+
+        <Route
+          path="/courses"
+          element={<Courses />}
+        />
+
+      </Routes>
+
+      <Footer />
+
+    </BrowserRouter>
+
+  );
+}
+
+
+// ==========================
+// STYLES
+// ==========================
+
+const styles = {
+
+  navbar: {
+    background: "#222",
+    color: "white",
+    padding: "15px 25px",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center"
+  },
+
+  link: {
+    color: "white",
+    margin: "10px",
+    textDecoration: "none"
+  },
+
+  page: {
+    textAlign: "center",
+    padding: "60px 20px"
+  },
+
+  form: {
+    width: "350px",
+    margin: "60px auto",
+    padding: "30px",
+    background: "white",
+    textAlign: "center",
+    borderRadius: "10px",
+    boxShadow: "0 2px 10px #ccc"
+  },
+
+  input: {
+    display: "block",
+    width: "90%",
+    padding: "12px",
+    margin: "15px auto",
+    boxSizing: "border-box"
+  },
+
+  button: {
+    padding: "12px 25px",
+    margin: "10px",
+    background: "#222",
+    color: "white",
+    border: "none",
+    borderRadius: "5px",
+    cursor: "pointer"
+  },
+
+  courses: {
+    display: "flex",
+    justifyContent: "center",
+    gap: "20px",
+    flexWrap: "wrap"
+  },
+
+  card: {
+    width: "220px",
+    padding: "20px",
+    background: "white",
+    borderRadius: "10px",
+    boxShadow: "0 2px 8px #ccc"
+  },
+
+  footer: {
+    textAlign: "center",
+    padding: "20px",
+    marginTop: "50px",
+    background: "#222",
+    color: "white"
+  }
+
+};
+
+export default App;
+```
